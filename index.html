@@ -4,14 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>初稿</title>
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/my-icon.icon" type="image/x-icon">
+    <link rel="shortcut icon" href="img/my-icon.icon" type="image/x-icon">
 </head>
 <body>
-    
+	<audio id="audio" src="" autoplay="autoplay" loop="loop"></audio>
+    <!-- 进度条 -->
+    <div id="loading">
+        <div id="loading-center">
+            <div class="round" id="round_four"></div>
+            <div class="round" id="round_three"></div>
+            <div class="round" id="round_two"></div>
+            <div class="round" id="round_one"></div>
+        </div>
+        <h2>请稍等..........</h2>
+    </div>
+    <!-- 展示内容 -->
+    <div class="slider3d first">
+	  <div class="slider3d__wrapper">
+	    <div class="slider3d__inner">
+	      <div class="slider3d__rotater">
+					<!-- 第一页 -->
+	        <div class="slider3d__item">
+                <div class="content">
+                    <span>人工智能在现代社会中的应用</span>
+								</div>
+								<!-- 图片动画 -->
+								<div class="img-show">
+									<div class="img-show-1"></div>
+									<div class="img-show-2"></div>
+									<div class="img-show-3"></div>
+									<div class="img-show-4"></div>
+								</div>
+					</div>
+					<!-- 第二页 -->
+	        <div class="slider3d__item">
+	          
+					</div>
+					<!-- 第三页 -->
+	        <div class="slider3d__item">
+	          
+					</div>
+					<!-- 第四页 -->
+	        <div class="slider3d__item">
+	          
+					</div>
+					<!-- 第五页 -->
+	        <div class="slider3d__item">
+	          
+	        </div>
+	      </div>
+	    </div>
+		</div>
+		<!-- 侧边导航 -->
+	  <div class="slider3d__controls">
+	    <div class="slider3d__handle">
+	      <div class="slider3d__handle__inner">
+	        <div class="slider3d__handle__rotater">
+	          <div class="slider3d__handle__item active">Page 1</div>
+	          <div class="slider3d__handle__item">Page 2</div>
+	          <div class="slider3d__handle__item">Page 3</div>
+	          <div class="slider3d__handle__item">Page 4</div>
+	          <div class="slider3d__handle__item">Page 5</div>
+	        </div>
+	      </div>
+			</div>
+			<!-- 上下切换标签 -->
+	    <div class="slider3d__control m--up"></div>
+	    <div class="slider3d__control m--down"></div>
+	  </div>
+	</div>
 </body>
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/main.js"></script>
 <script src="js/style.js"></script>
+<!-- 第一页动画 -->
+<script>
+	$(document).ready(function(){
+		$('.img-show-1').delay(2000).animate({left:"40%"},2000,"swing",function(){
+			$(this).animate({left:"100%"},function(){
+				$(this).css({"left":"4%","opacity":"0"});
+				$('.img-show-1').delay(8000).animate({opacity:"1"},1000);
+			})
+		});
+		$('.img-show-2').delay(4000).animate({left:"40%"},2000,"swing",function(){
+			$(this).animate({left:"100%"},function(){
+				$(this).css({"left":"28%","opacity":"0"});
+				$('.img-show-2').delay(6000).animate({opacity:"1"},1000);
+			})
+		});
+		$('.img-show-3').delay(6000).animate({left:"40%"},2000,"swing",function(){
+			$(this).animate({left:"100%"},function(){
+				$(this).css({"left":"52%","opacity":"0"});
+				$('.img-show-3').delay(4000).animate({opacity:"1"},1000);
+			})
+		});
+		$('.img-show-4').delay(8000).animate({left:"40%"},2000,"swing",function(){
+			$(this).animate({left:"100%"},function(){
+				$(this).css({"left":"76%","opacity":"0"});
+				$('.img-show-4').delay(2000).animate({opacity:"1"},1000);
+			})
+		});
+	})
+</script>
 </html>

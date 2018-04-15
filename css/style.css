@@ -1,0 +1,115 @@
+/* 进度条 */
+#loading {
+	background-color:#000000;
+	height:100%;
+	width:100%;
+	position: absolute;;
+    z-index:1000;
+    animation: lost 1.5s forwards 2s;
+}
+@keyframes lost{
+    from{opacity: 1;z-index: 1000;}
+    to{opacity: 0;z-index: 0;}
+}
+#loading h2{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-top: 30%;
+    padding-right: -10px;
+}
+#loading-center {
+	position:absolute;
+	left:43%;
+	top:35%;
+	height:200px;
+	width:200px;
+}
+.round {
+	border-radius:50% 50% 50% 50%;
+	/*从半角到圆弧*/
+		position:absolute;
+	border-top:3px solid #ffff00;
+	border-left:5px solid #ffffff;
+	border-bottom:5px solid transparent;
+	border-right:5px solid transparent;
+	animation:animate 3s infinite;
+}
+#round_one {
+	left:75px;
+	top:75px;
+	width:50px;
+	height:50px;
+}
+#round_two {
+	left:65px;
+	top:65px;
+	width:70px;
+	height:70px;
+	animation-delay:0.2s;
+}
+#round_three {
+	left:55px;
+	top:55px;
+	width:90px;
+	height:90px;
+	animation-delay:0.4s;
+}
+#round_four {
+	left:45px;
+	top:45px;
+	width:110px;
+	height:110px;
+	animation-delay:0.6s;
+}
+@keyframes animate {
+	50% {
+	transform:rotate(360deg) scale(0.8);
+}
+}
+/* 进度条end */
+.content{
+    width: 50%;
+	height: 100px;
+	line-height: 100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.content span{
+    position: absolute;
+    left: 20%;
+    top: 0;
+    font-size: 30px;
+    color: #ffffff;
+    animation: move 1s forwards 2s;
+}
+@keyframes move{
+    from{left: -100%;}
+    to{left: 20%;}
+}
+/* 图片动画 */
+.img-show{
+	width: 80%;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 100px;
+	position: relative;
+	overflow: hidden;
+}
+.img-show div{
+	width: 20%;
+	height: 80%;
+	position: absolute;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+/* .img-show-1{top: 0;left: 4%;}
+.img-show-2{top: 0;left: 28%;}
+.img-show-3{top: 0;left: 52%;}
+.img-show-4{top: 0;left: 76%;} */
+.img-show-1{top: 0;left: -20%;background-image: url(../img/first-page/001.jpg)}
+.img-show-2{top: 0;left: -20%;background-image: url(../img/first-page/002.jpg)}
+.img-show-3{top: 0;left: -20%;background-image: url(../img/first-page/003.jpg)}
+.img-show-4{top: 0;left: -20%;background-image: url(../img/first-page/004.jpg)}
